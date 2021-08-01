@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "1af53a7f-341f-4d81-965e-f752cd510b0d",
+		"name": "api_livros",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listBooks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/livros",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"livros"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBookByISBN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/livros/9783453435773",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"livros",
+						"9783453435773"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isbn\":\"9783453435773\",\r\n    \"title\":\"It\",\r\n    \"subtitle\":\"A Coisa\",\r\n    \"description\":\"Durante as férias de 1958, em uma pacata cidadezinha do Maine, Bill, Richie, Stan, Mike, Eddie, Ben e Beverly aprenderam o real sentido da amizade, do amor, da confiança... e do medo. O mais profundo e tenebroso medo.\",\r\n    \"pages\":40,\r\n    \"authors\":[\r\n        {\r\n            \"name\":\"Stephen King\",\r\n            \"description\":\"Book author\"\r\n        }\r\n    ],\r\n    \"genres\":[\r\n        {\r\n            \"name\":\"Terror/Horror\",\r\n            \"description\":\"Spooky\"\r\n        }\r\n    ],\r\n    \"publisher\":\"Dark Horse\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/livros",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"livros"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modifyBook",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Bisnaga 2\",\r\n    \"publisher\":\"Cavalo Manco\",\r\n    \"description\":\"Um cavalo muito cavaloso\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/livros/9783453435773",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"livros",
+						"9783453435773"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateBook",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isbn\":\"9783453435773\",\r\n    \"title\":\"It\",\r\n    \"subtitle\":\"A Coisa\",\r\n    \"description\":\"Durante as férias de 1958, em uma pacata cidadezinha do Maine, Bill, Richie, Stan, Mike, Eddie, Ben e Beverly aprenderam o real sentido da amizade, do amor, da confiança... e do medo. O mais profundo e tenebroso medo.\",\r\n    \"pages\":40,\r\n    \"authors\":[\r\n        {\r\n            \"name\":\"Stephen King\",\r\n            \"description\":\"Book author\"\r\n        }\r\n    ],\r\n    \"genres\":[\r\n        {\r\n            \"name\":\"Terror/Horror\",\r\n            \"description\":\"Spooky\"\r\n        }\r\n    ],\r\n    \"publisher\":\"Dark Horse\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/livros/9783453435773",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"livros",
+						"9783453435773"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBook",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/livros/9783453435773",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"livros",
+						"9783453435773"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
